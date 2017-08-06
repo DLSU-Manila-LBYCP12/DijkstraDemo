@@ -36,7 +36,41 @@ Path from S to F is SDF : Length = 12
 BUILD SUCCESSFUL (total time: 0 seconds)
 ```
 
-## Sample Run 2: Testing Joe James Dijkstra Demo (https://youtu.be/k1kLCB7AZbM)
+## Sample Run 2: Testing distanceedjohn Dijkstra Demo (https://youtu.be/8Ls1RqHCOPw)
+
+```
+run:
+Adjacency list: 
+A: {B=20, D=80, G=90}
+B: {F=10}
+C: {D=10, F=50, H=20}
+D: {C=10, G=20}
+E: {B=50, G=30}
+F: {C=10, D=40}
+G: {A=20}
+H: {}
+[A, B, C, D, E, F, G, H]
+Initialization: [0, 2147483647, 2147483647, 2147483647, 2147483647, 2147483647, 2147483647, 2147483647]
+Path from A to A is A : Length = 0
+[0, 20, 2147483647, 80, 2147483647, 2147483647, 90, 2147483647]
+Path from A to B is AB : Length = 20
+[0, 20, 2147483647, 80, 2147483647, 30, 90, 2147483647]
+Path from A to F is ABF : Length = 30
+[0, 20, 40, 70, 2147483647, 30, 90, 2147483647]
+Path from A to C is ABFC : Length = 40
+[0, 20, 40, 50, 2147483647, 30, 90, 60]
+Path from A to D is ABFCD : Length = 50
+[0, 20, 40, 50, 2147483647, 30, 70, 60]
+Path from A to H is ABFCH : Length = 60
+[0, 20, 40, 50, 2147483647, 30, 70, 60]
+Path from A to G is ABFCDG : Length = 70
+[0, 20, 40, 50, 2147483647, 30, 70, 60]
+Path from A to [E] not found.
+BUILD SUCCESSFUL (total time: 0 seconds)
+```
+
+
+## Sample Run 3: Testing Joe James Dijkstra Demo (https://youtu.be/k1kLCB7AZbM)
 
 ```
 run:

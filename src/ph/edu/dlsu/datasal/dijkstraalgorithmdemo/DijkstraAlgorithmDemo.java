@@ -22,7 +22,7 @@ public class DijkstraAlgorithmDemo {
 
     }
 
-    //
+    // https://youtu.be/8Ls1RqHCOPw
     // Testing distanceedjohn Dijkstra Demo
     private void testJohnDemo() {
         MyDirectedWeightedGraph graph = new MyDirectedWeightedGraph(8);

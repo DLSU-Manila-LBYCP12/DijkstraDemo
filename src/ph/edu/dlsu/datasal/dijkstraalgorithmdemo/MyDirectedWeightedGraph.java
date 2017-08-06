@@ -85,7 +85,7 @@ public class MyDirectedWeightedGraph {
         ArrayList<String> path = new ArrayList<>(numOfVertices);
 
         System.out.println(unCheckedNodes);
-        
+
         String source = vertices.get(0);
 
         // Initialize distances with large value
@@ -100,10 +100,15 @@ public class MyDirectedWeightedGraph {
 
         // Iterate over unchecked nodes until the destination is reached
         while (!unCheckedNodes.isEmpty()) {
-
+            int minIndex;
             // Choose the minimum distance as the new predecessor
-            int minIndex = minUncheckedIndex(distance, isChecked);
-            String predecessor = vertices.get(minIndex);     
+            try {
+                minIndex = minUncheckedIndex(distance, isChecked);
+            } catch (Exception e) {
+                System.out.println("Path from " + source + " to " + unCheckedNodes + " not found.");
+                break;
+            }
+            String predecessor = vertices.get(minIndex);
             System.out.println("Path from " + source + " to " + predecessor + " is " + path.get(minIndex) + " : Length = " + distance.get(minIndex));
             unCheckedNodes.remove(predecessor);
             isChecked.set(vertices.indexOf(predecessor), true);
@@ -116,7 +121,7 @@ public class MyDirectedWeightedGraph {
                 int currentIndex = vertices.indexOf(current);
                 if (unCheckedNodes.contains(current) && newDistance < distance.get(currentIndex)) {
                     distance.set(currentIndex, newDistance);
-                    path.set(currentIndex, path.get(predecessorIndex)  + current);                  
+                    path.set(currentIndex, path.get(predecessorIndex) + current);
                 }
             }
             System.out.println(distance);

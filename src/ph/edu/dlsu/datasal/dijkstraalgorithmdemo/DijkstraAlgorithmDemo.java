@@ -17,7 +17,45 @@ public class DijkstraAlgorithmDemo {
     public static void main(String[] args) {
         DijkstraAlgorithmDemo app = new DijkstraAlgorithmDemo();
         //app.testQ2Number23();
-        app.testJamesDemo();
+        //app.testJamesDemo();
+        app.testJohnDemo();
+
+    }
+
+    //
+    // Testing distanceedjohn Dijkstra Demo
+    private void testJohnDemo() {
+        MyDirectedWeightedGraph graph = new MyDirectedWeightedGraph(8);
+
+        // G = {V, E}
+        // V: Nodes
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addNode("D");
+        graph.addNode("E");
+        graph.addNode("F");
+        graph.addNode("G");
+        graph.addNode("H");
+
+        graph.addEdge("A", "B", 20);
+        graph.addEdge("A", "D", 80);
+        graph.addEdge("A", "G", 90);
+        graph.addEdge("B", "F", 10);
+        graph.addEdge("C", "D", 10);
+        graph.addEdge("C", "F", 50);
+        graph.addEdge("C", "H", 20);
+        graph.addEdge("D", "C", 10);
+        graph.addEdge("D", "G", 20);
+        graph.addEdge("E", "B", 50);
+        graph.addEdge("E", "G", 30);
+        graph.addEdge("F", "C", 10);
+        graph.addEdge("F", "D", 40);
+        graph.addEdge("G", "A", 20);
+
+        graph.displayAdjacency();
+
+        graph.dijkstraShortesPath();
     }
 
     // https://youtu.be/k1kLCB7AZbM

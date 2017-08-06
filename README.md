@@ -38,6 +38,7 @@ BUILD SUCCESSFUL (total time: 0 seconds)
 
 ## Sample Run 2: Testing distanceedjohn Dijkstra Demo (https://youtu.be/8Ls1RqHCOPw)
 
+![](Capture1.PNG)
 ```
 run:
 Adjacency list: 
